@@ -2,8 +2,11 @@ import React from 'react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import Navbar from './components/layout/Navbar';
 import Hero from './components/sections/Hero';
-import About from './components/sections/About';
 import SponsorsMarquee from './components/ui/SponsorsMarquee';
+import About from './components/sections/About';
+import Teams from './components/sections/Teams';
+import Documents from './components/sections/Documents';
+import Footer from './components/layout/Footer';
 
 function App() {
   return (
@@ -18,17 +21,13 @@ function App() {
         
         <main>
           <Hero />
-          
-          {/* O Marquee entra logo abaixo do Hero para impacto visual */}
           <SponsorsMarquee />
-          
           <About />
-          
-          {/* Placeholder para a próxima seção (Equipes) */}
-          <section id="equipes" className="min-h-screen bg-ng-dark flex items-center justify-center text-white">
-            <h2 className="text-4xl font-sans font-bold opacity-20">SEÇÃO EQUIPES EM BREVE</h2>
-          </section>
+          <Teams />
+          <Documents />
         </main>
+
+        <Footer />
         
       </div>
     </HelmetProvider>
