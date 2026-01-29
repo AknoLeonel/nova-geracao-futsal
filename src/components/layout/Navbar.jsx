@@ -27,11 +27,12 @@ const Navbar = () => {
           
           {/* LOGO */}
           <div className="flex-shrink-0 cursor-pointer">
-            <h1 className="font-sans text-2xl md:text-3xl font-bold tracking-tighter italic text-white">
-              NOVA <span className="text-ng-green">GERAÇÃO</span>
-            </h1>
+            <img 
+              src="/logosf.png" 
+              alt="Nova Geração Futsal" 
+              className="h-16 md:h-20 w-auto object-contain"
+            />
           </div>
-
           {/* MENU DESKTOP */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">

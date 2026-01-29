@@ -8,9 +8,11 @@ const Footer = () => {
         
         {/* Coluna 1: Marca */}
         <div className="col-span-1 md:col-span-2">
-          <h2 className="font-sans text-4xl font-bold italic tracking-tighter mb-4">
-            NOVA <span className="text-ng-green">GERAÇÃO</span>
-          </h2>
+          <img 
+              src="/logosf.png" 
+              alt="Nova Geração Futsal" 
+              className="h-20 md:h-20 w-auto object-contain"
+            />
           <p className="text-gray-400 max-w-sm mb-6">
             Transformando o cenário do futsal em Brasília. Mais que um time, uma escola de vida para a próxima geração de campeões.
           </p>
