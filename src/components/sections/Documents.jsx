@@ -12,11 +12,44 @@ import {
   FolderOpen 
 } from 'lucide-react';
 
-// Dados fornecidos por você
+// Dados atualizados com os novos editais em primeiro lugar
 const docs = [
-  { id: "01", title: "Edital 001/2026 - Seleção de Atletas Sub-13", date: "15 Jan 2026" },
-  { id: "02", title: "Prestação de Contas - Temporada 2025", date: "10 Jan 2026" },
-  { id: "03", title: "Regulamento Interno - Copa Nova Geração", date: "02 Jan 2026" },
+  { 
+    id: "06", 
+    title: "Edital de Cotação Nº 002 (Bens e Serviços) - Fomento Nº 976662", 
+    date: "08 Mar 2026",
+    link: "https://portal.plataformamaisbrasil.gov.br/maisbrasil-portal-frontend/"
+  },
+  { 
+    id: "05", 
+    title: "Edital de Cotação Nº 001 (Serviços RH) - Fomento Nº 976662", 
+    date: "08 Mar 2026",
+    link: "https://portal.plataformamaisbrasil.gov.br/maisbrasil-portal-frontend/"
+  },
+  { 
+    id: "04", 
+    title: "Termo de Fomento Nº 976662 (A Praia é Aqui)", 
+    date: "03 Fev 2026",
+    link: "#"
+  },
+  { 
+    id: "01", 
+    title: "Edital 001/2026 - Seleção de Atletas Sub-13", 
+    date: "15 Jan 2026",
+    link: "#"
+  },
+  { 
+    id: "02", 
+    title: "Prestação de Contas - Temporada 2025", 
+    date: "10 Jan 2026",
+    link: "#"
+  },
+  { 
+    id: "03", 
+    title: "Regulamento Interno - Copa Nova Geração", 
+    date: "02 Jan 2026",
+    link: "#"
+  },
 ];
 
 const Documents = () => {
@@ -68,7 +101,7 @@ const Documents = () => {
               <div className="h-1.5 w-24 bg-ng-green mt-3 rounded-full"></div>
             </motion.div>
 
-            {/* Grid de Stats (Adaptado para o contexto de documentos) */}
+            {/* Grid de Stats */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Card 1: Total de Arquivos */}
               <motion.div 
@@ -106,7 +139,7 @@ const Documents = () => {
               </motion.div>
             </div>
 
-            {/* Lista de Downloads (Seus dados reais) */}
+            {/* Lista de Downloads */}
             <div className="mt-4">
               <h4 className="text-gray-500 font-bold uppercase text-xs mb-4 tracking-wider flex items-center gap-2">
                 <FileText size={14} /> Lista de Downloads
@@ -130,9 +163,14 @@ const Documents = () => {
                         {doc.title}
                       </div>
                     </div>
-                    <button className="flex items-center gap-2 px-5 py-2.5 bg-gray-100 text-gray-600 group-hover:bg-ng-green group-hover:text-white rounded-full transition-colors text-sm font-bold whitespace-nowrap">
+                    <a 
+                      href={doc.link}
+                      target={doc.link !== "#" ? "_blank" : "_self"}
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-5 py-2.5 bg-gray-100 text-gray-600 group-hover:bg-ng-green group-hover:text-white rounded-full transition-colors text-sm font-bold whitespace-nowrap"
+                    >
                       <Download size={16} /> Baixar PDF
-                    </button>
+                    </a>
                   </motion.div>
                 ))}
               </div>
