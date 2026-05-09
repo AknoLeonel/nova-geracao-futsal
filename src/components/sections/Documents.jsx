@@ -15,6 +15,18 @@ import {
 // Dados atualizados com os novos editais em primeiro lugar
 const docs = [
   { 
+    id: "08", 
+    title: "Edital Nº 003/2026 - Aquisição de Bens e Serviços (Fomento 990649)", 
+    date: "Mai 2026",
+    link: "/edital-bens-e-servicos.pdf"
+  },
+  { 
+    id: "07", 
+    title: "Espelho Painel de Transferências (Fomento 990649)", 
+    date: "Mai 2026",
+    link: "/espelho-painel-990649.pdf"
+  },
+  { 
     id: "06", 
     title: "Edital de Cotação Nº 002 (Bens e Serviços) - Fomento Nº 976662", 
     date: "08 Mar 2026",
@@ -55,8 +67,8 @@ const docs = [
 const Documents = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Caminho da imagem na pasta public
-  const docImage = "/fomen.jpeg";
+  // Caminho da imagem atualizado para a captura de tela na pasta public
+  const docImage = "/preview-documento.png";
 
   return (
     <section id="editais" className="py-20 bg-ng-gray relative overflow-hidden">
@@ -177,7 +189,7 @@ const Documents = () => {
             </div>
           </div>
 
-          {/* LADO DIREITO: Preview da Imagem (Fomen) */}
+          {/* LADO DIREITO: Preview da Imagem */}
           <div className="lg:w-1/3">
              <motion.div 
                initial={{ x: 50, opacity: 0 }}
